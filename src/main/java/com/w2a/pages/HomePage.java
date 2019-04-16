@@ -9,14 +9,15 @@ public class HomePage extends Page {// By extending the Page class, you don't ha
 	
 	public LoginPage gotoLoginPage() {
 		
-		driver.findElement(By.cssSelector("a[class='zh-login']")).click();
+		click("a[class='zh-login']");
 		
 		return new LoginPage();//new keyword should be used
 	}
 	
 	public void gotoCustomersPage() {
 		
-		driver.findElement(By.cssSelector("a[class='zh-customers']")).click();
+		click ("customerslink_CSS");
+		
 	}
 	
 	public void validateFooterLink() {

@@ -1,29 +1,18 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="Data Driven Testing" verbose="1">
+<suite name="Page Object Model" verbose="1">
 	
 	<listeners>
-	<listener class-name="listeners.Listeners"></listener>
+	<listener class-name="com.w2a.listeners.Listeners"></listener>
 	<listener class-name="org.uncommons.reportng.HTMLReporter"></listener>
 	</listeners>
 	
-	<test name="Bank Manager LoginTest">
+	<test name="LoginTest">
 		<classes>
-			<class name="testcases.BankManagerLoginTest" />
+			<class name="com.w2a.testcases.LoginTest" />
 		</classes>
 	</test>
 	
-	<test name="Add Customer Test">
-		<classes>
-			<class name="testcases.AddCustomerTest" />
-		</classes>
-	</test>
-	
-	<test name="Open Account Test">
-		<classes>
-			<class name="testcases.OpenAccountTest" />
-		</classes>
-	</test>
 
 </suite>
 

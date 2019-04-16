@@ -15,16 +15,16 @@ import com.w2a.utilities.ExcelReader;
 
 //Common methods like capturing screenshot and getting data from excel file are placed here
 public class Utilities extends Page {
-	public static String fileName;
+	public static String screenshotName;
 	public static void captureScreenshot() throws IOException {
 		//Timestamp is added to get unique screenshot everytime
 		Date d = new Date();
-		fileName = (d.toString().replace(":", "_").replace(" ", "_")+".jpg");
+		screenshotName = (d.toString().replace(":", "_").replace(" ", "_")+".jpg");
 		
 		File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		//To move the screenshot file to particular location use FileUtils
-		FileUtils.copyFile(screenshot, new File (System.getProperty("user.dir")+"/test-output/html/"+fileName));
-		FileUtils.copyFile(screenshot, new File(System.getProperty("user.dir") + "\\target\\surefire-reports\\html\\" + fileName));
+		FileUtils.copyFile(screenshot, new File (System.getProperty("user.dir")+"/test-output/html/"+screenshotName));
+		FileUtils.copyFile(screenshot, new File(System.getProperty("user.dir") + "\\target\\surefire-reports\\html\\" + screenshotName));
 	}
 
 
