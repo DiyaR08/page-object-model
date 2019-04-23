@@ -21,7 +21,7 @@ import javax.mail.internet.MimeMultipart;
 public class MonitoringMail
 {
 	
-	public void sendMail(String mailServer, String from, String[] to, String subject, String messageBody, String attachmentPath, String attachmentName) throws MessagingException, AddressException
+	public void sendMail(String mailServer, String from, String[] to, String subject, String messageBody) throws MessagingException, AddressException
 	{
 		boolean debug = false;
 		Properties props = new Properties();
@@ -68,9 +68,9 @@ public class MonitoringMail
             body.setContent(messageBody,"text/html");
 
              BodyPart attachment = new MimeBodyPart();
-             DataSource source = new FileDataSource(attachmentPath);
-             attachment.setDataHandler(new DataHandler(source));
-             attachment.setFileName(attachmentName);
+             //DataSource source = new FileDataSource(attachmentPath);
+             //attachment.setDataHandler(new DataHandler(source));
+             //attachment.setFileName(attachmentName);
              MimeMultipart multipart = new MimeMultipart();
              multipart.addBodyPart(body);
              multipart.addBodyPart(attachment);
@@ -91,8 +91,8 @@ public class MonitoringMail
 		//To send an email, the sender has to authenticate hence the below method
 	    public PasswordAuthentication getPasswordAuthentication()
 	    {
-	        String username = MailConfig.from;
-	        String password = MailConfig.password;
+	        String username = TestConfig.from;
+	        String password = TestConfig.password;
 	        return new PasswordAuthentication(username, password);
 	    }
 	}

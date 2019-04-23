@@ -19,8 +19,8 @@ public class DbManager
 	public static void setDbConnection() throws SQLException, ClassNotFoundException
 	{
 		try{
-		Class.forName(MailConfig.driver);
-		con =	DriverManager.getConnection(MailConfig.dbConnectionUrl, MailConfig.dbUserName, MailConfig.dbPassword);
+		Class.forName(TestConfig.driver);
+		con =	DriverManager.getConnection(TestConfig.dbConnectionUrl, TestConfig.dbUserName, TestConfig.dbPassword);
 		
 		if(!con.isClosed())
 			System.out.println("Successfully connected to SQL server");
@@ -28,7 +28,7 @@ public class DbManager
 	}catch(Exception e){
 		System.err.println("Exception: " + e.getMessage());
 
-		//monitoringMail.sendMail(MailConfig.server, MailConfig.from, MailConfig.to, MailConfig.subject+" - (Script failed with Error, Datamart database used for reports, connection not established)", MailConfig.messageBody, MailConfig.attachmentPath, MailConfig.attachmentName);			
+		//monitoringMail.sendMail(TestConfig.server, TestConfig.from, TestConfig.to, TestConfig.subject+" - (Script failed with Error, Datamart database used for reports, connection not established)", TestConfig.messageBody, TestConfig.attachmentPath, TestConfig.attachmentName);			
 		}
 		
 		
@@ -39,8 +39,8 @@ public class DbManager
     try
     {
         
-        Class.forName (MailConfig.mysqldriver);
-        conn = DriverManager.getConnection (MailConfig.mysqlurl, MailConfig.mysqluserName, MailConfig.mysqlpassword);
+        Class.forName (TestConfig.mysqldriver);
+        conn = DriverManager.getConnection (TestConfig.mysqlurl, TestConfig.mysqluserName, TestConfig.mysqlpassword);
         if(!conn.isClosed())
 			System.out.println("Successfully connected to MySQL server");
         
@@ -51,7 +51,7 @@ public class DbManager
     	e.printStackTrace();
         System.err.println ("Cannot connect to database server");
        
-       // monitoringMail.sendMail(MailConfig.server, MailConfig.from, MailConfig.to, MailConfig.subject+" - (Script failed with Error, Datamart database used for reports, connection not established)", MailConfig.messageBody, MailConfig.attachmentPath, MailConfig.attachmentName);
+       // monitoringMail.sendMail(TestConfig.server, TestConfig.from, TestConfig.to, TestConfig.subject+" - (Script failed with Error, Datamart database used for reports, connection not established)", TestConfig.messageBody, TestConfig.attachmentPath, TestConfig.attachmentName);
     }
    
 

@@ -2,6 +2,7 @@
 
 <suite name="Page Object Model" verbose="1">
 	
+	<!-- ReportNG listeners -->
 	<listeners>
 	<listener class-name="com.w2a.listeners.Listeners"></listener>
 	<listener class-name="org.uncommons.reportng.HTMLReporter"></listener>

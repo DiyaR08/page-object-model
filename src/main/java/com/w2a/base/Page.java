@@ -13,6 +13,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
@@ -110,8 +111,9 @@ public class Page {
 
 			} else if (common_config.getProperty("browser").equals("chrome")) {
 			
-			System.setProperty("webdriver.chrome.driver",
-					System.getProperty("user.dir") + "/src/test/resources/com/w2a/executables/chromedriver");
+				WebDriverManager.chromedriver().setup();
+				
+				driver = new ChromeDriver();
 
 			Map<String, Object> prefs = new HashMap<String, Object>();
 			prefs.put("profile.default_content_setting_values.notifications", 2);
@@ -176,6 +178,7 @@ public class Page {
 
 		log.debug("Typing in an Element : "+locator+" entered value as : "+value);
 		
+		//To add test cases steps to Extent Report
 		test.log(LogStatus.INFO, "Typing in : " + locator + " entered value as " + value);
 
 	}

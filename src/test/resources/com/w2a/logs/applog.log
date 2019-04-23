@@ -1,6 +1,6 @@
-DEBUG   2019-04-13 18:01:01,838 [main] devpinoyLogger  - object_repository file loaded !!!
-DEBUG   2019-04-13 18:01:07,792 [main] devpinoyLogger  - Navigated to : https://www.zoho.com/
-DEBUG   2019-04-13 18:01:08,593 [main] devpinoyLogger  - Clicking on an Element : a[class='zh-login']
-DEBUG   2019-04-13 18:01:08,593 [main] devpinoyLogger  - Typing in an Element : #lid entered value as : Diyarao08@gmail.com
-DEBUG   2019-04-13 18:01:08,594 [main] devpinoyLogger  - Typing in an Element : #pwd entered value as : Testing@0987654321
-DEBUG   2019-04-13 18:01:08,594 [main] devpinoyLogger  - Clicking on an Element : #signin_submit
+DEBUG   2019-04-23 14:02:49,338 [main] devpinoyLogger  - object_repository file loaded !!!
+DEBUG   2019-04-23 14:02:53,169 [main] devpinoyLogger  - Navigated to : https://www.zoho.com/
+DEBUG   2019-04-23 14:02:53,455 [main] devpinoyLogger  - Clicking on an Element : a[class='zh-login']
+DEBUG   2019-04-23 14:02:53,461 [main] devpinoyLogger  - Typing in an Element : #lid entered value as : Diyarao08@gmail.com
+DEBUG   2019-04-23 14:02:53,461 [main] devpinoyLogger  - Typing in an Element : #pwd entered value as : Testing@0987654321
+DEBUG   2019-04-23 14:02:53,461 [main] devpinoyLogger  - Clicking on an Element : #signin_submit

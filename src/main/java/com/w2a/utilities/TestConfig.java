@@ -1,6 +1,6 @@
 package com.w2a.utilities;
 
-public class MailConfig {
+public class TestConfig {
 	
 	public static String server="smtp.gmail.com";
 	public static String from = "DiyaRao08@gmail.com";
