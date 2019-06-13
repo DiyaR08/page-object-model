@@ -16,6 +16,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -43,7 +44,7 @@ public class Page {
 	public static ExtentTest test;
 	public static String browser;
 
-	public static CRMTopMenu menu;
+	public static CRMTopMenu menu;//This is done instead of creating the object in every class, AccountPage, CRM page
 	/*
 	 * Logs,
 	 * Properties - OR, Config
@@ -123,13 +124,13 @@ public class Page {
 			options.setExperimentalOption("prefs", prefs);
 			options.addArguments("--disable-extensions");
 			options.addArguments("--disable-infobars");
-
-			/*driver = new ChromeDriver(options);
+			driver = new ChromeDriver(options);
+			
 			}else if (common_config.getProperty("browser").equals("ie")) {
 
 				System.setProperty("webdriver.ie.driver",
 						System.getProperty("user.dir") + "\\src\\test\\resources\\executables\\IEDriverServer.exe");
-				driver = new InternetExplorerDriver();*/
+				driver = new InternetExplorerDriver();
 
 			}
 			driver.get(common_config.getProperty("testsiteurl"));

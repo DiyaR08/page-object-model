@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import com.w2a.pages.crm.accounts.AccountsPage;
 
 public class CRMTopMenu{
+	//HomePage, Accountpage and every Page has TopMenu
 	//CRMTopMenu class is encapsulated inside the Page class so, you cannot extends Page class here
 	
 	WebDriver driver;

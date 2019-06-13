@@ -6,6 +6,7 @@
 	<listeners>
 	<listener class-name="com.w2a.listeners.Listeners"></listener>
 	<listener class-name="org.uncommons.reportng.HTMLReporter"></listener>
+	<listener class-name="org.uncommons.reportng.JUnitXMLReporter"></listener>
 	</listeners>
 	
 	<test name="LoginTest">
